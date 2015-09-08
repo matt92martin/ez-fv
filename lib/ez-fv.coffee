@@ -15,7 +15,6 @@ module.exports = EzFv =
         @questions = new Questions(state.questions)
         @subscriptions = new CompositeDisposable
         # @subscriptions.add
-        #test
         atom.commands.add('atom-workspace', 'ez-fv:insert': => @insert())
         atom.commands.add('atom-workspace', 'ez-fv:rows': => @rows())
         atom.commands.add('atom-workspace', 'ez-fv:cols': => @cols())
