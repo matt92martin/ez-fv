@@ -1,3 +1,3 @@
-# ez-fv package
+# Ez-Fv package
 
 FocusVision Shortcuts
