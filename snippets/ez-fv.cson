@@ -1,0 +1,200 @@
+".text.xml":
+    "Single row":
+        "prefix": "row"
+        "body": "<row label=\"r${1:Label}\">${2:Text}</row>"
+    "Shuffle":
+        "prefix": "sh"
+        "body": "shuffle=\"rows\""
+    "Remove from data":
+        "prefix": "aa"
+        "body": "aggregate=\"0\" percentages=\"0\""
+    "Only show in report":
+        "prefix": "rep"
+        "body": "where=\"report\""
+    "Open end":
+        "prefix": "oe"
+        "body": "open=\"1\" openSize=\"25\" randomize=\"0\""
+    "Exclusive row":
+        "prefix": "ee"
+        "body": "randomize=\"0\" exclusive=\"1\""
+    "Block":
+        "prefix": "block"
+        "body": """
+            <block label="${1:Label}" cond="${2:Condition}">
+            ${3:Questions}
+            </block>
+            """
+    "Rating":
+        "prefix": "rating"
+        "body": "type=\"rating\"${1: values=\"order\"}"
+    "CSS Style":
+        "prefix": "css"
+        "body": """
+            <style name="respview.client.css"><![CDATA[
+            <style>
+            ${1:CSS}
+            </style>
+            ]]></style>
+            """
+    "JS Style":
+        "prefix": "js"
+        "body": """
+            <style name="respview.client.js"> <![CDATA[
+            <script type="text/javascript">
+            ${1:JS}
+            </script>
+            ]]></style>
+            """
+    "Question.after":
+        "prefix": "question.after"
+        "body": """
+            <style name="question.after" wrap="ready"><![CDATA[
+            ${1:JS}
+            ]]></style>
+            """
+    "Break x1":
+        "prefix": "br1"
+        "body": "<br/>"
+    "Break x2":
+        "prefix": "br"
+        "body": "<br/><br/>"
+    "Condition":
+        "prefix": "cond"
+        "body": "cond=\"$1\""
+    "Copy Elements":
+        "prefix": "copy"
+        "body": "onLoad=\"copy(\"${1:Label}\", rows=True${2:, exclude=\"\"})\""
+    "Suspend Tag":
+        "prefix": "su"
+        "body": "<suspend/>"
+    "Term Tag":
+        "prefix": "term"
+        "body": "<term cond=\"${1:cond}\">$2</term>"
+    "GoTo Tag":
+        "prefix": "goto"
+        "body": "<goto target=\"${1:Target}\" cond=\"${2:Cond}\" />"
+    "Label Tag":
+        "prefix": "label"
+        "body": "<label label=\"${1:Label}\" />"
+    "Exec":
+        "prefix": "exec"
+        "body": """
+            <exec>
+            $1
+            </exec>
+            """
+    "Validate":
+        "prefix": "validate"
+        "body": """
+            <validate>
+            $1
+            </validate>
+            """
+    "Quota Tag":
+        "prefix": "quota"
+        "body": "<quota sheet=\"${1:Sheet}\" />"
+    "Keyed File":
+        "prefix": "kf"
+        "body": """
+            from hermes.virtual import KeyedFile
+            kf1 = KeyedFile(\"%s/${1:File}\" % gv.survey.path, \"source\")
+            """
+    "Loop":
+        "prefix": "loop"
+        "body": """
+            <loop label="${1:Loop Label}" vars="${2:Variables}">
+                <block label="${3:Block Label}">
+
+                ${4:Questions}
+
+                </block>
+
+                <looprow label="1"><loopvar name="Variables">1</loopvar></looprow>
+            </loop>
+            """
+    "Res Tag":
+        "prefix": "res"
+        "body": "<res label=\"${1:label}\">$2</res>"
+    "Column Legend Rows":
+        "prefix": "collegend"
+        "body": "colLegendRows=\"$1\""
+    # "":
+    #     "prefix": ""
+    #     "body": ""
+    "vStatus":
+        "prefix": "vStatus"
+        "body": """
+            <radio label="vStatus" title="Status">
+            <virtual>
+            if 'recovered' in markers:
+                data[0][0] = 3
+            else:
+                if 'qualified' in markers:
+                    data[0][0] = 2
+                elif 'OQ' in markers:
+                    data[0][0] = 1
+                else:
+                    data[0][0] = 0
+            </virtual>
+              <row label="r1">Term</row>
+              <row label="r2">OQ</row>
+              <row label="r3">Quals</row>
+              <row label="r4">Partials</row>
+            </radio>
+            """
+    "States List":
+        "prefix": "states"
+        "body": """
+              <choice label="ch1">Alabama</choice>
+              <choice label="ch2">Alaska</choice>
+              <choice label="ch3">Arizona</choice>
+              <choice label="ch4">Arkansas</choice>
+              <choice label="ch5">California</choice>
+              <choice label="ch6">Colorado</choice>
+              <choice label="ch7">Connecticut</choice>
+              <choice label="ch8">Delaware</choice>
+              <choice label="ch9">District of Columbia</choice>
+              <choice label="ch10">Florida</choice>
+              <choice label="ch11">Georgia</choice>
+              <choice label="ch12">Hawaii</choice>
+              <choice label="ch13">Idaho</choice>
+              <choice label="ch14">Illinois</choice>
+              <choice label="ch15">Indiana</choice>
+              <choice label="ch16">Iowa</choice>
+              <choice label="ch17">Kansas</choice>
+              <choice label="ch18">Kentucky</choice>
+              <choice label="ch19">Louisiana</choice>
+              <choice label="ch20">Maine</choice>
+              <choice label="ch21">Maryland</choice>
+              <choice label="ch22">Massachusetts</choice>
+              <choice label="ch23">Michigan</choice>
+              <choice label="ch24">Minnesota</choice>
+              <choice label="ch25">Mississippi</choice>
+              <choice label="ch26">Missouri</choice>
+              <choice label="ch27">Montana</choice>
+              <choice label="ch28">Nebraska</choice>
+              <choice label="ch29">Nevada</choice>
+              <choice label="ch30">New Hampshire</choice>
+              <choice label="ch31">New Jersey</choice>
+              <choice label="ch32">New Mexico</choice>
+              <choice label="ch33">New York</choice>
+              <choice label="ch34">North Carolina</choice>
+              <choice label="ch35">North Dakota</choice>
+              <choice label="ch36">Ohio</choice>
+              <choice label="ch37">Oklahoma</choice>
+              <choice label="ch38">Oregon</choice>
+              <choice label="ch39">Pennsylvania</choice>
+              <choice label="ch40">Rhode Island</choice>
+              <choice label="ch41">South Carolina</choice>
+              <choice label="ch42">South Dakota</choice>
+              <choice label="ch43">Tennessee</choice>
+              <choice label="ch44">Texas</choice>
+              <choice label="ch45">Utah</choice>
+              <choice label="ch46">Vermont</choice>
+              <choice label="ch47">Virginia</choice>
+              <choice label="ch48">Washington</choice>
+              <choice label="ch49">West Virginia</choice>
+              <choice label="ch50">Wisconsin</choice>
+              <choice label="ch51">Wyoming</choice>
+              <choice label="ch52">Other</choice>
+            """

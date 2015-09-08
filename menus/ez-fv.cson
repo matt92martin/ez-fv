@@ -1,0 +1,42 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+    '.workspace': [
+        { 'type' : 'separator' }
+        {
+            'label' : 'EZ FV'
+            'submenu': [
+                { 'label': 'Rows', 'command': 'ez-fv:rows' }
+                { 'label': 'Cols', 'command': 'ez-fv:cols' }
+            ]
+        }
+        { 'type' : 'separator' }
+        { 'label' : 'Strip', 'command': 'ez-fv:strip'}
+    ]
+  # 'atom-text-editor': [
+  #   {
+  #     'label': 'Make Rows'
+  #     'command': 'ez-fv:rows'
+  #   }
+  #   {
+  #     'label': 'Make Columns'
+  #     'command': 'ez-fv:cols'
+  #   }
+  # ]
+#'menu': [
+#  {
+#    'label': 'Packages'
+#    'submenu': [
+#      'label': 'ez-fv'
+#      'submenu': [
+#        {
+#          'label': 'Make Rows'
+#          'command': 'ez-fv:rows'
+#        }
+#        {
+#          'label': 'Make Columns'
+#          'command': 'ez-fv:cols'
+#        }
+#      ]
+#    ]
+#  }
+#]
