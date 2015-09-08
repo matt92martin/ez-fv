@@ -3,10 +3,25 @@
     '.workspace': [
         { 'type' : 'separator' }
         {
-            'label' : 'EZ FV'
+            'label' : 'EZ FV Questions'
+            'submenu': [
+                { 'label': 'Radio', 'command': 'ez-fv:radio' }
+                { 'label': 'Checkbox', 'command': 'ez-fv:checkbox' }
+                { 'label': 'Select', 'command': 'ez-fv:select' }
+                { 'label': 'Number', 'command': 'ez-fv:number' }
+                { 'label': 'Float', 'command': 'ez-fv:float' }
+                { 'label': 'Text', 'command': 'ez-fv:text' }
+                { 'label': 'Textarea', 'command': 'ez-fv:textarea' }
+            ]
+        }
+        { 'type' : 'separator' }
+        {
+            'label' : 'EZ FV Choices'
             'submenu': [
                 { 'label': 'Rows', 'command': 'ez-fv:rows' }
-                { 'label': 'Cols', 'command': 'ez-fv:cols' }
+                { 'label': 'Columns', 'command': 'ez-fv:cols' }
+                { 'label': 'Choices', 'command': 'ez-fv:choices' }
+                { 'label': 'Cases', 'command': 'ez-fv:cases' }
             ]
         }
         { 'type' : 'separator' }
