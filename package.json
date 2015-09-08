@@ -25,7 +25,7 @@
         "ez-fv:textarea"
     ]
   },
-  "repository": "https://github.com/atom/ez-fv",
+  "repository": "https://github.com/matt92martin/ez-fv",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
