@@ -28,6 +28,7 @@ module.exports = EzFv =
         atom.commands.add('atom-workspace', 'ez-fv:float': => @float())
         atom.commands.add('atom-workspace', 'ez-fv:text': => @text())
         atom.commands.add('atom-workspace', 'ez-fv:textarea': => @textarea())
+        atom.commands.add('atom-workspace', 'ez-fv:comment': => @comment())
 
     deactivate: ->
         @subscriptions.dispose()
@@ -42,6 +43,9 @@ module.exports = EzFv =
         if editor = atom.workspace.getActiveTextEditor()
             # @modalPanel = atom.workspace.addModalPanel(item: @InsertNumbersView.getElement(), visible: false)
             @InsertNumbersView.toggle(editor)
+
+    comment: ->
+        @ezFvView.comment()
 
     rows: ->
         @ezFvView.rows()

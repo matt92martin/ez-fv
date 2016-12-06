@@ -22,6 +22,7 @@
                 { 'label': 'Columns', 'command': 'ez-fv:cols' }
                 { 'label': 'Choices', 'command': 'ez-fv:choices' }
                 { 'label': 'Cases', 'command': 'ez-fv:cases' }
+                { 'label': 'Comment', 'command': 'ez-fv:comment' }
             ]
         }
         { 'type' : 'separator' }

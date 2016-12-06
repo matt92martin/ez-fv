@@ -22,7 +22,8 @@
       "ez-fv:number",
       "ez-fv:float",
       "ez-fv:text",
-      "ez-fv:textarea"
+      "ez-fv:textarea",
+      "ez-fv:comment"
     ]
   },
   "repository": "https://github.com/matt92martin/ez-fv",

@@ -55,6 +55,12 @@ class EzFvView
         @input = @editor.getTextInBufferRange(@selRange)
         # input = @buffer.getText() #gets alllllll text
 
+    comment: ->
+        @getEditor()
+        comment = "<comment>#{@input.trim()}</comment>"
+        @insertItems(comment)
+        return true
+
     rows: ->
         @getEditor()
         lines = @getLabels(@input)
